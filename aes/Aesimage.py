@@ -62,3 +62,4 @@ writeJpegIdentifier(fileOut)
 fileOut.closed
 
 fileIn.closed
+
