@@ -5,14 +5,18 @@
 This type of cipher was used by Julius Caesar to communicate with his generals. 
 It is very simple to generate but it can actually be easily broken and does not provide the security one would hope for.
 
+
+## ccrack
 Feed the encrypted message into `ccrack`.
+
+
 
 ```
 > python ccrack.py "Dtz pjju ts zxnsl ymfy btwi. N it sty ymnsp ny rjfsx bmfy dtz ymnsp ny rjfsx."
 5
 ```
 
-Use the returned substitution cipher to convert the encrypted message back into plain text with `decipher`.
+Use the returned substitution cipher to convert the encrypted message back into plain text with `cipher`.
 
 ```
 > cipher -k 5 -d "Dtz pjju ts zxnsl ymfy btwi. N it sty ymnsp ny rjfsx bmfy dtz ymnsp ny rjfsx."
