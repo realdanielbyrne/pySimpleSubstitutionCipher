@@ -1,12 +1,12 @@
-import sys 
+import sys
 import argparse
 
 def encrypt(plaintext, k):
 	cipher = ''
-	
+
 	for letter in plaintext:
 		c = ord(letter)
-		
+
 		if (c >= 65 and c <= 90):
 			c = (c + k) % 91
 			if c < 65:
@@ -16,17 +16,17 @@ def encrypt(plaintext, k):
 			c = (c + k) % 123
 			if c < 97:
 				c+=97
-			
+
 		cipher += chr(c)
-		
+
 	print ('Your encrypted message is: ' + cipher)
 
 def decrypt(ciphertext, k):
 	plaintext = ''
-	
+
 	for letter in ciphertext:
-		c = ord(letter)		
-		
+		c = ord(letter)
+
 		if (c >= 65 and c <= 90):
 			c = (c-k-64) % (90-64) + 64
 			if c < 65:
@@ -34,10 +34,10 @@ def decrypt(ciphertext, k):
 
 		elif (c >= 97 and c <= 122):
 			c = (c-k-96) % (122-96) + 96
-		
+
 		plaintext +=chr(c)
 
-		
+
 	print ('Your plain text message is: ' + plaintext)
 
 def obfuscate(message):
@@ -50,12 +50,13 @@ def obfuscate(message):
 			c = 88
 		elif (c >= 97 and c <= 122):
 			c = 120
-			
+
 		obfuscated += chr(c)
 
 	print ('Your obfuscated message is: ' + obfuscated)
 
-def main():
+if __name__ == '__main__':
+
 	parser = argparse.ArgumentParser(description='Encrypts plaintext or decrypts ciphertext.')
 	parser.add_argument('message', help='The message to be either encrypted or decrypted.')
 	parser.add_argument('-o', action='store_true', help="Obfuscate a message by replacing every lowercase character with an x, and every uppercase character with an X.")
@@ -71,4 +72,3 @@ def main():
 	else:
 		encrypt(args.message, int(args.k))
 
-main()

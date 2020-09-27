@@ -1,19 +1,26 @@
 # A Simple Substitution Cipher implementation in Python 
 
-## Simple Substitution Cipher
+## The Simple Substitution Cipher
 
 This type of cipher was used by Julius Caesar to communicate with his generals. 
 It is very simple to generate but it can actually be easily broken and does not provide the security one would hope for.
 
+Feed the encrypted message into `ccrack`.
 
-![](problem1.png)
+```
+> python ccrack.py "Dtz pjju ts zxnsl ymfy btwi. N it sty ymnsp ny rjfsx bmfy dtz ymnsp ny rjfsx."
+5
+```
 
-## Breaking a Simple Substitution Cipher
+Use the returned substitution cipher to convert the encrypted message back into plain text with `decipher`.
 
-Retrieves the key and plaintext used to create a given cipher text string. 
+```
+> cipher -k 5 -d "Dtz pjju ts zxnsl ymfy btwi. N it sty ymnsp ny rjfsx bmfy dtz ymnsp ny rjfsx."
+Your plain text message is: You keep on using that word. I do not think it means what you think it means.
 
+```
 
-**REsults:**
+**Results:**
 
 ```
 > ccrack "T lx azdetyr gpcj wlep"
