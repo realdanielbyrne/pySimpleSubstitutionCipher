@@ -5,6 +5,11 @@
 This type of cipher was used by Julius Caesar to communicate with his generals, and thus it is sometimes referred to as a Caesar cipher 
 It is very simple to generate but it can actually be easily broken and does not provide the security one would hope for.
 
+
+## Tools
+1. `ccrack` : Attempts to guess the key of a Caesar cipher by using frequency analysis of the characters in the message.
+2. `cchipher` : Encrypts or decrypts a Caesar cipher.
+
 ## Encrypt Example 
 
 Encrypt a Caesar cipher encrypted message with a 21 character shift
