@@ -5,6 +5,7 @@
 		}
 	],
 	"settings": {
-		"editor.tabCompletion": "on"
+		"editor.tabCompletion": "on",
+		"python.pythonPath": "/Users/daniel/opt/anaconda3/bin/python"
 	}
 }
